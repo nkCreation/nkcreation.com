@@ -1,0 +1,90 @@
+td,
+input[type='text'],
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625em;
+  font-size: calc(1em * 0.625);
+}
+
+body,
+html {
+  min-height: 100%;
+  height: 100%;
+}
+
+:root {
+  --font-family: #{$fontFamily};
+  --font-family-title: #{$fontFamilyTitle};
+  --background-gutter-size: 168px;
+  --nk-color1: #{$color1};
+  --nk-color1-rgb: #{torgb($color1)};
+  --nk-color2: #{$color2};
+  --nk-color2-rgb: #{torgb($color2)};
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  font-size: 2rem;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.u-wrapper {
+  margin: 0 auto;
+  max-width: calc(var(--background-gutter-size) * 8);
+  text-align: left;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-title);
+  color: var(--color1);
+  font-weight: 300;
+  margin: 0;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to right,
+    var(--bg-grid-color, rgba(white, 0.08)),
+    var(--bg-grid-color, rgba(white, 0.08)) 1px,
+    transparent 1px,
+    transparent var(--background-gutter-size)
+  );
+  background-size: calc(var(--background-gutter-size) * 2);
+}

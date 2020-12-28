@@ -37,7 +37,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['normalize.css/normalize.css', '~/assets/scss/app.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -51,6 +51,14 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Lato: [400, 700, 900],
+        },
+      },
+    ],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

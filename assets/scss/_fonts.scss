@@ -1,0 +1,37 @@
+@import url('//hello.myfonts.net/count/382ec5');
+@import url('//hello.myfonts.net/count/39130e');
+
+@font-face {
+  font-family: 'Carrara';
+  font-weight: 400;
+  src: url('~assets/fonts/carrara/39130E_0_0.eot');
+  src: url('~assets/fonts/carrara/39130E_0_0.eot?#iefix')
+      format('embedded-opentype'),
+    url('~assets/fonts/carrara/39130E_0_0.woff2') format('woff2'),
+    url('~assets/fonts/carrara/39130E_0_0.woff') format('woff'),
+    url('~assets/fonts/carrara/39130E_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Carrara';
+  font-weight: 700;
+  src: url('~assets/fonts/carrara/382EC5_0_0.eot');
+  src: url('~assets/fonts/carrara/382EC5_0_0.eot?#iefix')
+      format('embedded-opentype'),
+    url('~assets/fonts/carrara/382EC5_0_0.woff2') format('woff2'),
+    url('~assets/fonts/carrara/382EC5_0_0.woff') format('woff'),
+    url('~assets/fonts/carrara/382EC5_0_0.ttf') format('truetype'),
+    url('~assets/fonts/carrara/382EC5_0_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'Carrara';
+  font-weight: 300;
+  src: url('~assets/fonts/carrara/382EC5_1_0.eot');
+  src: url('~assets/fonts/carrara/382EC5_1_0.eot?#iefix')
+      format('embedded-opentype'),
+    url('~assets/fonts/carrara/382EC5_1_0.woff2') format('woff2'),
+    url('~assets/fonts/carrara/382EC5_1_0.woff') format('woff'),
+    url('~assets/fonts/carrara/382EC5_1_0.ttf') format('truetype'),
+    url('~assets/fonts/carrara/382EC5_1_0.svg#wf') format('svg');
+}
