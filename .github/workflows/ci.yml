@@ -44,3 +44,6 @@ jobs:
 
       - name: Run tests 🧪
         run: npm run test
+
+      - name: Run a test build 🛠
+        run: npm run generate
