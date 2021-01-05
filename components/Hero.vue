@@ -55,7 +55,7 @@ main {
 }
 
 h1 {
-  color: rgba(white, 0.88);
+  color: white;
   line-height: 1.1;
   font-weight: 300;
   font-size: 8rem;
@@ -66,23 +66,7 @@ h1 {
 p {
   font-size: 2.4rem;
   font-weight: normal;
-  color: white;
+  color: rgba(white, 0.88);
   margin: 2em 0;
-}
-
-button {
-  appearance: none;
-  border: 0;
-  padding: 0 2em;
-  width: auto;
-  height: 48px;
-  line-height: 48px;
-  border-radius: 24px;
-  color: #005e7e;
-  font-weight: 700;
-  letter-spacing: calc(-16em / 1000);
-  font-size: 2rem;
-  background: linear-gradient(to bottom right, #fff 0%, #e4fafc 100%);
-  box-shadow: 0 4px 32px rgba(255, 255, 255, 0.16);
 }
 </style>
