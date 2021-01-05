@@ -12,6 +12,11 @@
     "lint": "npm run lint:js && npm run lint:style",
     "test": "jest"
   },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.5",
@@ -43,6 +48,7 @@
     "prettier": "^2.1.2",
     "sass": "^1.32.0",
     "sass-loader": "^10.1.0",
+    "semantic-release": "^17.3.1",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
