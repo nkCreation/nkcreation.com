@@ -48,8 +48,14 @@ jobs:
       - name: Run a test build 🛠
         run: npm run generate
 
-      - name: Semantic release 🚀
+      - name: Semantic release ⬆️
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+
+      - name: Build on netlify 🚀
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: wei/curl@v1.1.1
+        with:
+          args: ${{ secrets.NETLIFY_ACTION }}
