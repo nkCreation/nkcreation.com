@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/nkCreation/nkcreation.com/compare/v1.1.0...v1.1.1) (2021-01-08)
+
+
+### Bug Fixes
+
+* **deps:** bump @nuxtjs/pwa from 3.3.3 to 3.3.4 ([10876f7](https://github.com/nkCreation/nkcreation.com/commit/10876f7ed944f0d31fd4d49f85c7416732fc429e))
+
 # [1.1.0](https://github.com/nkCreation/nkcreation.com/compare/v1.0.0...v1.1.0) (2021-01-05)
 
 
