@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/nkCreation/nkcreation.com/compare/v1.1.1...v1.1.2) (2021-01-08)
+
+
+### Bug Fixes
+
+* remove base content ([88b4354](https://github.com/nkCreation/nkcreation.com/commit/88b43548236629b98d1cc62370bd8448dc6e3049))
+
 ## [1.1.1](https://github.com/nkCreation/nkcreation.com/compare/v1.1.0...v1.1.1) (2021-01-08)
 
 
