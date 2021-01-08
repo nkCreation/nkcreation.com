@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/nkCreation/nkcreation.com/compare/v1.1.2...v1.2.0) (2021-01-08)
+
+
+### Features
+
+* add release to netlify ([be96afc](https://github.com/nkCreation/nkcreation.com/commit/be96afc68fc2f60465e1527dfaccf3eb7d043951))
+
 ## [1.1.2](https://github.com/nkCreation/nkcreation.com/compare/v1.1.1...v1.1.2) (2021-01-08)
 
 
