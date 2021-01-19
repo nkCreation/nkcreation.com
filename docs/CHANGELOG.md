@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/nkCreation/nkcreation.com/compare/v1.2.0...v1.2.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* **deps:** bump @nuxt/typescript-runtime from 2.0.0 to 2.0.1 ([f64f96d](https://github.com/nkCreation/nkcreation.com/commit/f64f96dc1c5d03577174a099b68fd42d87a04e6f))
+
 # [1.2.0](https://github.com/nkCreation/nkcreation.com/compare/v1.1.2...v1.2.0) (2021-01-08)
 
 
