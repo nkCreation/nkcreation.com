@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/nkCreation/nkcreation.com/compare/v1.2.1...v1.2.2) (2021-01-20)
+
+
+### Bug Fixes
+
+* **deps:** bump core-js from 3.8.2 to 3.8.3 ([cf01f98](https://github.com/nkCreation/nkcreation.com/commit/cf01f98e2df4df5057693e8bf96a8d91e37d4e38))
+
 ## [1.2.1](https://github.com/nkCreation/nkcreation.com/compare/v1.2.0...v1.2.1) (2021-01-19)
 
 
