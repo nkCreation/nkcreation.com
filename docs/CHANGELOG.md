@@ -1,3 +1,12 @@
+## [1.2.4](https://github.com/nkCreation/nkcreation.com/compare/v1.2.3...v1.2.4) (2021-02-09)
+
+
+### Bug Fixes
+
+* change commitlint param to pass with dependabot ([05b3679](https://github.com/nkCreation/nkcreation.com/commit/05b367987002d1d2974cc9f5f73d436a19ede046))
+* update ci on develop ([b1415e6](https://github.com/nkCreation/nkcreation.com/commit/b1415e6ddc05c153fd76f1d8104d6ad7afb418b7))
+* **deps:** bump @nuxtjs/axios from 5.12.5 to 5.13.1 ([bb33a70](https://github.com/nkCreation/nkcreation.com/commit/bb33a70eb8047df0255fa8a14d613654c6908e72))
+
 ## [1.2.3](https://github.com/nkCreation/nkcreation.com/compare/v1.2.2...v1.2.3) (2021-02-09)
 
 
