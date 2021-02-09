@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/nkCreation/nkcreation.com/compare/v1.2.2...v1.2.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* **deps:** bump @nuxtjs/pwa from 3.3.4 to 3.3.5 ([1ea5d0b](https://github.com/nkCreation/nkcreation.com/commit/1ea5d0b6b698ddfe7e9d12dadbfb9965540b08bc))
+* **deps:** bump actions/cache from v2 to v2.1.4 ([9d2f884](https://github.com/nkCreation/nkcreation.com/commit/9d2f88466c1f68a0cd4e77ee734b3763c9001f8d))
+* **deps:** bump stylelint-scss from 3.18.0 to 3.19.0 ([a7d6078](https://github.com/nkCreation/nkcreation.com/commit/a7d6078735cff17a5ec862a6e5b87751c18ecfc6))
+
 ## [1.2.2](https://github.com/nkCreation/nkcreation.com/compare/v1.2.1...v1.2.2) (2021-01-20)
 
 
