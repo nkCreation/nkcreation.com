@@ -16,7 +16,10 @@
         <p>
           Based in Rennes (35), France, I actually work for
           <strong>Zenika</strong> as a consultant.<br />
-          I’m also freelancer and CEO at <strong>Skypaper</strong>.
+          I’m also freelancer and CEO at
+          <a href="https://skypaper.io/" target="_blank"
+            ><strong>Skypaper</strong></a
+          >.
         </p>
 
         <Button color="white">Let's work together</Button>
@@ -61,6 +64,11 @@ h1 {
   font-size: 8rem;
   letter-spacing: calc(-20em / 1000);
   margin-top: 0;
+}
+
+a {
+  font: inherit;
+  color: inherit;
 }
 
 p {
