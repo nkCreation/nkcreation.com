@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/nkCreation/nkcreation.com/compare/v1.2.4...v1.2.5) (2021-02-18)
+
+
+### Bug Fixes
+
+* **deps:** bump nuxt version ([3595d70](https://github.com/nkCreation/nkcreation.com/commit/3595d70d9c43a444479c665d4b09c0d47d3a53ae))
+
 ## [1.2.4](https://github.com/nkCreation/nkcreation.com/compare/v1.2.3...v1.2.4) (2021-02-09)
 
 
