@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/nkCreation/nkcreation.com/compare/v1.5.3...v1.5.4) (2021-04-06)
+
+
+### Bug Fixes
+
+* perf no opener ([cd2f3bd](https://github.com/nkCreation/nkcreation.com/commit/cd2f3bd99b875fe203a20d3eaca7ed942aa29af1))
+
 ## [1.5.3](https://github.com/nkCreation/nkcreation.com/compare/v1.5.2...v1.5.3) (2021-04-06)
 
 
