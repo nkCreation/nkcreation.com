@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/nkCreation/nkcreation.com/compare/v1.5.0...v1.5.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* change OG attribute ([faa3039](https://github.com/nkCreation/nkcreation.com/commit/faa3039c335a87d961b53a6ff5bb6e178893f325))
+
 # [1.5.0](https://github.com/nkCreation/nkcreation.com/compare/v1.4.0...v1.5.0) (2021-04-06)
 
 
