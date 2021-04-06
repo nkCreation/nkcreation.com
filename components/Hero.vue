@@ -17,7 +17,7 @@
           Based in Rennes (35), France, I actually work for
           <strong>Zenika</strong> as a consultant.<br />
           I’m also freelancer and CEO at
-          <a href="https://skypaper.io/" target="_blank"
+          <a rel="noopener" href="https://skypaper.io/" target="_blank"
             ><strong>Skypaper</strong></a
           >.
         </p>
@@ -25,7 +25,7 @@
         <Button
           href="https://nicolasleport.fr/contact/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener"
           class="button"
           color="white"
           >Let's work together</Button
