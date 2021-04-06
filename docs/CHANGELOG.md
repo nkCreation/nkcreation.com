@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/nkCreation/nkcreation.com/compare/v1.5.2...v1.5.3) (2021-04-06)
+
+
+### Bug Fixes
+
+* performance fix ([2cf7f7b](https://github.com/nkCreation/nkcreation.com/commit/2cf7f7bbc93dc0ee68b681ef3f97835d5014ffe4))
+
 ## [1.5.2](https://github.com/nkCreation/nkcreation.com/compare/v1.5.1...v1.5.2) (2021-04-06)
 
 
