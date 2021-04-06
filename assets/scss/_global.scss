@@ -49,7 +49,7 @@ body {
   margin: 0 auto;
   max-width: calc(var(--background-gutter-size) * 8);
   text-align: left;
-  width: 100%;
+  width: calc(100% - 3.2rem);
 }
 
 h1,
@@ -87,4 +87,5 @@ h4 {
     transparent var(--background-gutter-size)
   );
   background-size: calc(var(--background-gutter-size) * 2);
+  background-position: center;
 }

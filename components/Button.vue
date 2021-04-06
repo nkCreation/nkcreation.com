@@ -1,5 +1,7 @@
 <template>
-  <button :type="type" :class="classesNames"><slot /></button>
+  <component :is="tag" :href="href" :type="type" :class="classesNames"
+    ><slot
+  /></component>
 </template>
 
 <script lang="ts">
@@ -9,6 +11,11 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 export default class ButtonComponent extends Vue {
   @Prop({ type: String, default: 'primary' }) readonly color!: string
   @Prop({ type: String, default: 'button' }) readonly type!: string
+  @Prop({ type: String, default: null }) readonly href!: string
+
+  get tag() {
+    return this.href ? 'a' : 'button'
+  }
 
   get classesNames() {
     return `nk-button nk-button--${this.color}`
@@ -30,6 +37,7 @@ export default class ButtonComponent extends Vue {
   --nk-button-shadow-property: 0 4px 32px;
 
   cursor: pointer;
+  text-decoration: none;
   appearance: none;
   outline: none;
   border: 0;
@@ -51,11 +59,7 @@ export default class ButtonComponent extends Vue {
   &--white {
     --nk-button-shadow-color: rgba(255, 255, 255, 0.16);
     --nk-button-color: var(--nk-color1);
-    --nk-button-background: linear-gradient(
-      to bottom right,
-      #fff 0%,
-      #e4fafc 100%
-    );
+    --nk-button-background: #fff;
   }
 }
 </style>

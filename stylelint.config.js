@@ -6,5 +6,6 @@ module.exports = {
     'no-descending-specificity': null,
     'no-duplicate-selectors': null,
     'at-rule-no-unknown': null,
+    'function-calc-no-invalid': null,
   },
 }
