@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/nkCreation/nkcreation.com/compare/v1.4.0...v1.5.0) (2021-04-06)
+
+
+### Features
+
+* add head meta infos ([7a70bdb](https://github.com/nkCreation/nkcreation.com/commit/7a70bdbc8774ab463cfcb6b4ab773f6bd58ab567))
+
 # [1.4.0](https://github.com/nkCreation/nkcreation.com/compare/v1.3.0...v1.4.0) (2021-04-06)
 
 
