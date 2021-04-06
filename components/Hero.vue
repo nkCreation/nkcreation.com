@@ -25,6 +25,7 @@
         <Button
           href="https://nicolasleport.fr/contact/"
           target="_blank"
+          rel="noreferrer"
           class="button"
           color="white"
           >Let's work together</Button
