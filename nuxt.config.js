@@ -1,14 +1,68 @@
+export const defaultTitle =
+  'nkCreation - WebDesigner & Developer in Rennes, FR (35)'
+export const defaultDescription =
+  'Nicolas Leport, interface designer & builder in Rennes, France. Actually work for Zenika. Also a freelancer and CEO at Skypaper.'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'nkcreation',
+    title: defaultTitle,
     meta: [
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: defaultTitle,
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: defaultDescription,
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://www.nkcreation.com/icon.png',
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: defaultTitle,
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: defaultTitle,
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: defaultDescription,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.nkcreation.com/icon.png',
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://www.nkcreation.com/icon.png',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: defaultTitle,
+      },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: defaultDescription,
+      },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
     ],
