@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/nkCreation/nkcreation.com/compare/v1.5.1...v1.5.2) (2021-04-06)
+
+
+### Bug Fixes
+
+* a11y problems ([602b97c](https://github.com/nkCreation/nkcreation.com/commit/602b97cef3c84a28b2aea85b9130ff33fcec61cf))
+
 ## [1.5.1](https://github.com/nkCreation/nkcreation.com/compare/v1.5.0...v1.5.1) (2021-04-06)
 
 
