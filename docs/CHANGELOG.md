@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/nkCreation/nkcreation.com/compare/v1.3.0...v1.4.0) (2021-04-06)
+
+
+### Features
+
+* ready to put online ([164bb25](https://github.com/nkCreation/nkcreation.com/commit/164bb25019d298cb09ae23d5598d7d05e67cdb8c))
+
 # [1.3.0](https://github.com/nkCreation/nkcreation.com/compare/v1.2.5...v1.3.0) (2021-02-18)
 
 
