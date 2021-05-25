@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/nkCreation/nkcreation.com/compare/v1.5.4...v1.5.5) (2021-05-25)
+
+
+### Bug Fixes
+
+* typo in hero text ([3005b7c](https://github.com/nkCreation/nkcreation.com/commit/3005b7ceaab5cf74ea2f40f520f948a4658e0332))
+
 ## [1.5.4](https://github.com/nkCreation/nkcreation.com/compare/v1.5.3...v1.5.4) (2021-04-06)
 
 
