@@ -14,7 +14,7 @@
         </h1>
 
         <p>
-          Based in Rennes (35), France, I actually work for
+          Based in Rennes (35), France, I currently work for
           <strong>Zenika</strong> as a consultant.<br />
           I’m also freelancer and CEO at
           <a rel="noopener" href="https://skypaper.io/" target="_blank"
