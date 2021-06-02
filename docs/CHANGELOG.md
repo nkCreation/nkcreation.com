@@ -1,3 +1,12 @@
+## [1.5.6](https://github.com/nkCreation/nkcreation.com/compare/v1.5.5...v1.5.6) (2021-06-02)
+
+
+### Bug Fixes
+
+* font smoothing ([4c07e44](https://github.com/nkCreation/nkcreation.com/commit/4c07e44f415a5ca139fd4acfc813d26ebe53c5f3))
+* **deps:** bump actions/cache from 2.1.4 to 2.1.5 ([5c1b2af](https://github.com/nkCreation/nkcreation.com/commit/5c1b2af64f2127f3def8275a0909f211d799ce49))
+* **deps:** bump actions/setup-node from 2.1.4 to 2.1.5 ([7aa80b4](https://github.com/nkCreation/nkcreation.com/commit/7aa80b4d038909121ea201e04577b175f1e57b6f))
+
 ## [1.5.5](https://github.com/nkCreation/nkcreation.com/compare/v1.5.4...v1.5.5) (2021-05-25)
 
 
