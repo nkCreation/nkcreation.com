@@ -46,7 +46,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.15.0",
+    "nuxt": "^2.15.7",
     "stylelint-scss": "^3.19.0",
     "vue-class-component": "^7.2.6"
   },
