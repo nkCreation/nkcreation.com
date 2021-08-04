@@ -7,5 +7,11 @@ module.exports = {
     'no-duplicate-selectors': null,
     'at-rule-no-unknown': null,
     'function-calc-no-invalid': null,
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: ['v-deep'],
+      },
+    ],
   },
 }

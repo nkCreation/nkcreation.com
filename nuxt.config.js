@@ -4,6 +4,10 @@ export const defaultDescription =
   'Nicolas Leport, interface designer & builder in Rennes, France. Actually work for Zenika. Also a freelancer and CEO at Skypaper.'
 
 export default {
+  env: {
+    apiUrl: process.env.API_URL,
+  },
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
