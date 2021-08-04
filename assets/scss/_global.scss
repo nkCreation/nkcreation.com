@@ -89,4 +89,18 @@ h4 {
   );
   background-size: calc(var(--background-gutter-size) * 2);
   background-position: center;
+
+  &--light {
+    --bg-grid-color: rgba(var(--nk-color1-rgb), .08);
+  }
+}
+
+
+[data-disappear] {
+  opacity: calc(1 - (var(--scroll-position) - var(--fade-begin, 0)) / var(--fade-end, 400));
+  filter: blur(calc((var(--scroll-position) - var(--fade-begin, 0)) / var(--fade-end, 400) * var(--blur-factor, 2px)));
+}
+
+[data-parallax] {
+  transform: translateY(calc(var(--scroll-position) * var(--parallax-speed, 1) * 1px));
 }
