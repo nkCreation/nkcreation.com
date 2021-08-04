@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/nkCreation/nkcreation.com/compare/v1.5.6...v1.6.0) (2021-08-04)
+
+
+### Features
+
+* plug directus ([445216e](https://github.com/nkCreation/nkcreation.com/commit/445216e95b408a03a3248093be2f28d61c740d8b))
+
 ## [1.5.6](https://github.com/nkCreation/nkcreation.com/compare/v1.5.5...v1.5.6) (2021-06-02)
 
 
