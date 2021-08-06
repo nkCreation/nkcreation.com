@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import HeaderComponent from '~/components/Header.vue'
+import HeaderComponent from '~/components/ui/organisms/Header.vue'
 export default Vue.extend({
   data: () => ({
     headerDark: true,

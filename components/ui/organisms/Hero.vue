@@ -12,7 +12,7 @@
         <Button
           v-if="link && label"
           data-disappear
-          :href="hrefLink"
+          :href="link"
           target="_blank"
           rel="noopener"
           class="button"
@@ -33,10 +33,6 @@ export default class HeroComponent extends Vue {
   @Prop({ type: String, default: '' }) readonly message!: string
   @Prop({ type: String, default: '' }) readonly link!: string
   @Prop({ type: String, default: '' }) readonly label!: string
-
-  get hrefLink() {
-    return `https://nicolasleport.fr/${this.link}`
-  }
 }
 </script>
 

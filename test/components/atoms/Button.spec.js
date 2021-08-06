@@ -1,10 +1,10 @@
-import Button from '@/components/Button.vue'
-import { shallowMount } from '@vue/test-utils'
+import Button from '~/components/ui/atoms/Button.vue'
+import { factory } from '~/test/utils/helper'
 
 describe('Button', () => {
   it('should have correct class with props', () => {
     const buttonColor = 'white'
-    const wrapper = shallowMount(Button, {
+    const wrapper = factory(Button, {
       propsData: {
         color: buttonColor,
       },
@@ -17,7 +17,7 @@ describe('Button', () => {
 
   it('should have correct type', () => {
     const buttonType = 'submit'
-    const wrapper = shallowMount(Button, {
+    const wrapper = factory(Button, {
       propsData: {
         type: buttonType,
       },
