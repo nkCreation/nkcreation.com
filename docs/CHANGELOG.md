@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/nkCreation/nkcreation.com/compare/v1.6.0...v1.7.0) (2021-08-06)
+
+
+### Bug Fixes
+
+* target blank on button link ([4a0d149](https://github.com/nkCreation/nkcreation.com/commit/4a0d149c27b419551e4ad95cda43d07b7d2ea146))
+
+
+### Features
+
+* add nuxt link handling in button ([187ae5c](https://github.com/nkCreation/nkcreation.com/commit/187ae5c74675387aa532165c09886633e37ecc16))
+
 # [1.6.0](https://github.com/nkCreation/nkcreation.com/compare/v1.5.6...v1.6.0) (2021-08-04)
 
 
