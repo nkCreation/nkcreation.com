@@ -1,11 +1,6 @@
 <template>
   <div>
-    <Hero
-      :link="link"
-      :label="button_label"
-      :title="title"
-      :message="message"
-    />
+    <Hero v-bind="heroData" />
   </div>
 </template>
 
@@ -18,8 +13,11 @@ export default Vue.extend({
     const { data } = await $axios.$get(`${env.apiUrl}items/hero`)
 
     return {
-      ...data,
-      title: data.title.replace(/\n/g, '<br />'),
+      heroData: {
+        ...data,
+        title: data.title.replace(/\n/g, '<br />'),
+        label: data.button_label,
+      },
     }
   },
 })

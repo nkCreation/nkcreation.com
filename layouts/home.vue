@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div class="header" :class="{ 'is-overlap': headerDark }">
+  <div class="home">
+    <div class="home__header">
       <Header ref="headerElement" :dark="headerDark" />
     </div>
 
-    <div class="content">
+    <div class="home__page">
       <span class="bg-grid bg-grid--light"></span>
+
       <Nuxt />
     </div>
   </div>
@@ -43,16 +44,8 @@ export default Vue.extend({
       const element = (this.$refs.headerElement as HeaderComponent)
         ?.$el as HTMLElement
       const height = element?.clientHeight
-      const translate = element
-        ? parseInt(
-            getComputedStyle(element).getPropertyValue('--header-translate')
-          )
-        : 0
 
-      this.headerDark = !(
-        scrollPos >
-        window.innerHeight - (height + translate / 2)
-      )
+      this.headerDark = !(scrollPos > window.innerHeight - height)
       document.documentElement.style.setProperty(
         '--scroll-position',
         '' + scrollPos
@@ -63,24 +56,23 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.header {
-  ::v-deep header {
-    --header-translate: 64;
-
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-    transition: transform var(--header-timing, 0.2s) ease-in-out;
-  }
-
-  &.is-overlap ::v-deep header {
-    transform: translateY(calc(var(--header-translate, 64) * 1px));
-  }
+.home {
+  position: relative;
+  float: left;
+  width: 100%;
 }
 
-.content {
+.home__header {
+  height: 0;
+  margin-top: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.home__page {
   position: relative;
   z-index: 1;
+  margin-top: -64px;
 }
 </style>

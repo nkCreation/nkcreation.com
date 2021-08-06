@@ -20,7 +20,7 @@ export default class HeaderComponent extends Vue {
 
 <style scoped lang="scss">
 header {
-  --header-timing: 0.6s;
+  --header-timing: 0.4s;
   --is-dark: 0;
   --opacity: calc(1 - var(--is-dark));
 
