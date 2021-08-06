@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/nkCreation/nkcreation.com/compare/v1.7.0...v1.8.0) (2021-08-06)
+
+
+### Features
+
+* add default layout ([9ccd191](https://github.com/nkCreation/nkcreation.com/commit/9ccd191ad8c376f057232db108e815ca27403053))
+
 # [1.7.0](https://github.com/nkCreation/nkcreation.com/compare/v1.6.0...v1.7.0) (2021-08-06)
 
 
