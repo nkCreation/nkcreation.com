@@ -25,6 +25,7 @@ export default class ButtonComponent extends Vue {
       class: this.classesNames,
       href: this.isANuxtLink ? null : this.href,
       to: this.isANuxtLink ? this.href : null,
+      target: this.href && !this.isANuxtLink ? '_blank' : null,
     }
   }
 

@@ -13,8 +13,6 @@
           v-if="link && label"
           data-disappear
           :href="link"
-          target="_blank"
-          rel="noopener"
           class="button"
           color="white"
           >{{ label }}</Button
@@ -81,6 +79,8 @@ export default class HeroComponent extends Vue {
   .button {
     --fade-begin: 360;
     --fade-end: 500;
+
+    font-size: clamp(1.6rem, 1.4615rem + 0.3846vw, 2rem);
   }
 }
 
@@ -113,9 +113,5 @@ h1 {
     color: rgba(white, 0.88);
     margin: 2em 0;
   }
-}
-
-.button {
-  font-size: clamp(1.6rem, 1.4615rem + 0.3846vw, 2rem);
 }
 </style>

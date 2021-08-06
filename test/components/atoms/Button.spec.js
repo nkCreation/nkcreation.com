@@ -38,6 +38,7 @@ describe('Button', () => {
       expect(wrapper.get('a').attributes('href')).toBe(
         'https://www.example.com/'
       )
+      expect(wrapper.get('a').attributes('target')).toBe('_blank')
     })
 
     it('should be a nuxt link when relative path is passed', () => {
