@@ -1,7 +1,5 @@
 <template>
-  <component :is="tag" :href="href" :type="type" :class="classesNames"
-    ><slot
-  /></component>
+  <component :is="tag" v-bind="props"><slot /></component>
 </template>
 
 <script lang="ts">
@@ -11,10 +9,23 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 export default class ButtonComponent extends Vue {
   @Prop({ type: String, default: 'primary' }) readonly color!: string
   @Prop({ type: String, default: 'button' }) readonly type!: string
-  @Prop({ type: String, default: null }) readonly href!: string
+  @Prop({ type: String, default: '' }) readonly href!: string
+
+  get isANuxtLink() {
+    return !this.href.startsWith('http')
+  }
 
   get tag() {
-    return this.href ? 'a' : 'button'
+    return this.href ? (this.isANuxtLink ? 'nuxt-link' : 'a') : 'button'
+  }
+
+  get props() {
+    return {
+      type: this.type,
+      class: this.classesNames,
+      href: this.isANuxtLink ? null : this.href,
+      to: this.isANuxtLink ? this.href : null,
+    }
   }
 
   get classesNames() {

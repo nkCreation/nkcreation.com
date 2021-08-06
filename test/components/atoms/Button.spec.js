@@ -25,4 +25,31 @@ describe('Button', () => {
 
     expect(wrapper.get('button').attributes('type')).toBe(buttonType)
   })
+
+  describe('right component depending on href', () => {
+    it('should be a normal link when http is passed', () => {
+      const wrapper = factory(Button, {
+        propsData: {
+          href: 'https://www.example.com/',
+        },
+      })
+
+      expect(wrapper.get('a').exists()).toBe(true)
+      expect(wrapper.get('a').attributes('href')).toBe(
+        'https://www.example.com/'
+      )
+    })
+
+    it('should be a nuxt link when relative path is passed', () => {
+      const wrapper = factory(Button, {
+        propsData: {
+          href: 'contact',
+        },
+        stubs: ['nuxt-link'],
+      })
+
+      expect(wrapper.find('nuxt-link-stub').exists()).toBe(true)
+      expect(wrapper.find('nuxt-link-stub').attributes('to')).toBe('contact')
+    })
+  })
 })
