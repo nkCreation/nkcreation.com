@@ -20,17 +20,33 @@ export default class HeaderComponent extends Vue {
 
 <style scoped lang="scss">
 header {
-  --header-timing: 0.4s;
+  --header-timing: 0.2s;
   --is-dark: 0;
   --opacity: calc(1 - var(--is-dark));
 
   padding: 2.4rem 0;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0.4rem 2.4rem rgba(#{var(--nk-color1-rgb)}, 0.08);
 
   &.is-dark {
     --is-dark: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    z-index: -1;
+    display: block;
+    opacity: calc(1 - var(--opacity));
+    background: linear-gradient(
+      to bottom,
+      rgba(black, 0.32) 0%,
+      rgba(black, 0) 100%
+    );
   }
 
   &::before {
@@ -42,9 +58,11 @@ header {
     height: 300%;
     z-index: -1;
     display: block;
-    background: white;
+    background: rgba(white, 0.96);
+    backdrop-filter: blur(10px) saturate(120%);
     opacity: var(--opacity);
     transition: opacity 0.4s linear;
+    box-shadow: 0 0.4rem 2.4rem rgba(#{var(--nk-color1-rgb)}, 0.08);
   }
 }
 
@@ -64,8 +82,5 @@ header {
     left: 0;
     opacity: calc(1 - var(--opacity));
   }
-}
-img {
-  display: block;
 }
 </style>

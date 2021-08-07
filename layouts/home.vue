@@ -5,8 +5,6 @@
     </div>
 
     <div class="home__page">
-      <span class="bg-grid bg-grid--light"></span>
-
       <Nuxt />
     </div>
   </div>

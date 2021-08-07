@@ -34,6 +34,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    'nuxt-graphql-request',
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
@@ -77,6 +78,14 @@ export default {
       description: defaultDescription,
       lang: 'fr',
       useWebmanifestExtension: true,
+    },
+  },
+
+  graphql: {
+    clients: {
+      default: {
+        endpoint: process.env.API_URL + 'graphql',
+      },
     },
   },
 }

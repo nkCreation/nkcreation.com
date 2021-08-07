@@ -32,6 +32,8 @@ html {
   --background-gutter-size: 168px;
   --nk-color1: #{$color1};
   --nk-color1-rgb: #{torgb($color1)};
+  --nk-text-color: #{$textColor};
+  --nk-text-color-rgb: #{torgb($textColor)};
   --nk-color2: #{$color2};
   --nk-color2-rgb: #{torgb($color2)};
 }
@@ -39,13 +41,13 @@ html {
 body {
   min-height: 100%;
   height: 100%;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.4615rem + 0.3846vw, 2rem);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
   font-family: var(--font-family);
-  color: var(--text-color);
+  color: var(--nk-text-color);
 }
 
 .u-wrapper {
@@ -60,9 +62,40 @@ h2,
 h3,
 h4 {
   font-family: var(--font-family-title);
-  color: var(--color1);
+  color: var(--nk-color1);
+  letter-spacing: calc(-20em / 1000);
   font-weight: 300;
-  margin: 0;
+  margin: 0.6em 0;
+
+  &.has-subtitle {
+    margin-bottom: 0;
+  }
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-size: clamp(2rem, 1.8615rem + 0.3846vw, 2.4rem);
+}
+
+h1 {
+  font-size: 8rem;
+  font-size: clamp(6.4rem, 5.8462rem + 1.5385vw, 8rem);
+}
+
+h2 {
+  font-size: 6.4rem;
+  font-size: clamp(4.8rem, 4.2462rem + 1.5385vw, 6.4rem);
+}
+
+h3 {
+  font-size: 4rem;
+  font-size: clamp(2.8rem, 2.3846rem + 1.1538vw, 4rem);
+}
+
+h4 {
+  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 2.1231rem + 0.7692vw, 3.2rem);
 }
 
 .icon {
@@ -100,12 +133,6 @@ h4 {
 [data-disappear] {
   opacity: calc(
     1 - (var(--scroll-position) - var(--fade-begin, 0)) / var(--fade-end, 400)
-  );
-  filter: blur(
-    calc(
-      (var(--scroll-position) - var(--fade-begin, 0)) / var(--fade-end, 400) *
-        var(--blur-factor, 2px)
-    )
   );
 }
 
