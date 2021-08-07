@@ -48,11 +48,11 @@ export default Vue.extend({
           message
           link
         }
-        service_page {
+        servicePage: service_page {
           title
           subtitle
         }
-        project_page {
+        projectPage: project_page {
           title
           subtitle
         }
@@ -72,7 +72,7 @@ export default Vue.extend({
       }
     `
 
-    const { hero, service_page, services, project_page, realisations } =
+    const { hero, servicePage, services, projectPage, realisations } =
       await $graphql.default.request(query)
 
     return {
@@ -82,11 +82,11 @@ export default Vue.extend({
         label: hero.button_label,
       },
       services: {
-        ...service_page,
+        ...servicePage,
         items: services,
       },
       projects: {
-        ...project_page,
+        ...projectPage,
         items: realisations.map((realisation: any) => {
           return {
             ...realisation,
