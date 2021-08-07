@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no-install eslint --ext .js,.vue --ignore-path .gitignore . && npx --no-install stylelint **/*.{vue,css} --ignore-path .gitignore $1
+npx --no-install eslint --fix --ext .js,.vue --ignore-path .gitignore . && npx --no-install stylelint **/*.{vue,css} --fix --ignore-path .gitignore $1

@@ -1,5 +1,5 @@
 <template>
-  <section class="page" ref="pageElement">
+  <section ref="pageElement" class="page">
     <span class="bg-grid bg-grid--light"></span>
 
     <span class="page__blob page__blob--1"></span>

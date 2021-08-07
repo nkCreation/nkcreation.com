@@ -6,7 +6,7 @@
       <div class="section">
         <h2 class="has-subtitle">{{ services.title }}</h2>
         <p class="subtitle">{{ services.subtitle }}</p>
-        <div class="bloc" v-for="service in services.items" :key="service.id">
+        <div v-for="service in services.items" :key="service.id" class="bloc">
           <h3>{{ service.title }}</h3>
           <p>{{ service.description }}</p>
         </div>
@@ -19,7 +19,7 @@
       <div class="section">
         <h2 class="has-subtitle">{{ projects.title }}</h2>
         <p class="subtitle">{{ projects.subtitle }}</p>
-        <div class="bloc" v-for="project in projects.items" :key="project.id">
+        <div v-for="project in projects.items" :key="project.id" class="bloc">
           <h3>{{ project.title }}</h3>
           <img :src="project.thumbnail" alt="" />
           <p>{{ project.description }}</p>
