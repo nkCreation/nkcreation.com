@@ -54,7 +54,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
+    // https://go.nuxtjs.dev/pwa,
+    [
+      'nuxt-image-extractor',
+      {
+        baseUrl: process.env.API_URL,
+        path: '/_images',
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

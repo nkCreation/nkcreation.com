@@ -16,6 +16,13 @@
         </div>
       </div>
 
+      <div class="section-quote">
+        <Quote class="quote" author="Christopher Arzur, CTO at Skypaper">
+          This is a fuckin’ great quote about me from an inspiring guy. Like I’m
+          doing very great stuff.
+        </Quote>
+      </div>
+
       <div class="section">
         <h2 class="has-subtitle">{{ projects.title }}</h2>
         <p class="subtitle">{{ projects.subtitle }}</p>
@@ -62,6 +69,7 @@ export default Vue.extend({
           description
           thumbnail {
             id
+            filename_disk
           }
         }
         services(limit: 2) {
@@ -90,7 +98,7 @@ export default Vue.extend({
         items: realisations.map((realisation: any) => {
           return {
             ...realisation,
-            thumbnail: `${env.apiUrl}assets/${realisation.thumbnail.id}`,
+            thumbnail: `${env.apiUrl}assets/${realisation.thumbnail.filename_disk}`,
           }
         }),
       },
@@ -152,5 +160,17 @@ export default Vue.extend({
     width: 66.6666%;
     background: white;
   }
+}
+
+.section-quote {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: '. . quote quote quote quote . .';
+  margin-bottom: 4em;
+}
+
+.quote {
+  grid-area: quote;
 }
 </style>
