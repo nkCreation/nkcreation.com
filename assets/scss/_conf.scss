@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // colors 	-----------------------------------------------------------------------/
 $nkColor1: #296b85;
 $nkColor2: #278588;
@@ -38,6 +40,7 @@ $bigTablet: 1024px;
 $tablet: 900px;
 $bigPhone: 720px;
 $phone: 440px;
+$smallPhone: 360px;
 
 $easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -154,4 +157,31 @@ $toggleMenu-size: 6rem;
   @if ($color != null) {
     @return #{red($color)}, #{green($color)}, #{blue($color)};
   }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function torem($value) {
+  $remValue: math.div($value, 10px);
+  @return strip-unit($remValue);
+}
+
+@function autoclamp($min, $max, $minvw: $smallPhone, $maxvw: $smallDesktop) {
+  $minVwWidthInRem: torem($minvw);
+  $maxVwWidthInRem: torem($maxvw);
+
+  $slope: math.div(($max - $min), ($maxVwWidthInRem - $minVwWidthInRem));
+  $yAxis: -$minVwWidthInRem * $slope + $min;
+
+  @return clamp(
+    #{$min},
+    #{$yAxis} + #{strip-unit($slope * 100) * 1vw},
+    #{$max}
+  );
 }

@@ -35,6 +35,8 @@ export default class HeroComponent extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/conf';
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -82,7 +84,7 @@ export default class HeroComponent extends Vue {
     --fade-begin: 360;
     --fade-end: 500;
 
-    font-size: clamp(1.6rem, 1.4615rem + 0.3846vw, 2rem);
+    font-size: autoclamp(1.6rem, 2rem);
   }
 }
 
@@ -97,7 +99,7 @@ main {
 h1 {
   color: white;
   line-height: 1.1;
-  font-size: clamp(4rem, 2.6154rem + 3.8462vw, 8rem);
+  font-size: autoclamp(4rem, 8rem);
   margin-top: 0;
 }
 
@@ -108,8 +110,8 @@ h1 {
   }
 
   p {
-    font-size: clamp(1.6rem, 1.3231rem + 0.7692vw, 2.4rem);
-    font-size: clamp(2rem, 1.8615rem + 0.3846vw, 2.4rem);
+    font-size: autoclamp(1.6rem, 2.4rem);
+    font-size: autoclamp(2rem, 2.4rem);
     font-weight: normal;
     color: rgba(white, 0.88);
     margin: 2em 0;

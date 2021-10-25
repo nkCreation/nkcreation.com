@@ -23,7 +23,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/scss/conf';
+
 figure {
+  --background-scale: 1;
+
   display: block;
   margin: 8em 0 10em;
   position: relative;
@@ -32,24 +36,34 @@ figure {
     content: '';
     display: block;
     position: absolute;
-    right: 1.6rem;
+    left: 50%;
     top: 50%;
     background-image: url('~assets/img/quote.svg');
     width: 75.3rem;
     height: 71.7rem;
     background-size: contain;
-    transform: translateY(-40%);
+    transform: translate(-56%, -40%) scale(var(--background-scale));
+  }
+
+  @include breakpoint($tablet) {
+    --background-scale: 0.8;
+  }
+
+  @include breakpoint($bigPhone) {
+    --background-scale: 0.6;
   }
 }
 
 blockquote {
   font-size: 4.8rem;
+  font-size: autoclamp(2.8rem, 4.8rem);
   margin: 0;
   padding: 0;
   font-family: var(--font-family-title);
   font-weight: 300;
   color: var(--nk-color1);
   letter-spacing: calc(-20em / 1000);
+  line-height: 1.3;
 
   &::before,
   &::after {
@@ -79,6 +93,7 @@ blockquote {
 }
 
 figcaption {
-  font-size: 2.4rem;
+  font-size: autoclamp(1.6rem, 2.4rem);
+  margin-top: 1.6rem;
 }
 </style>

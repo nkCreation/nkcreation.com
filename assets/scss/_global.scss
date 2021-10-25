@@ -41,7 +41,7 @@ html {
 body {
   min-height: 100%;
   height: 100%;
-  font-size: clamp(1.6rem, 1.4615rem + 0.3846vw, 2rem);
+  font-size: autoclamp(1.6rem, 2rem);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -75,27 +75,27 @@ h4 {
 .subtitle {
   margin-top: 0;
   margin-bottom: 1.5em;
-  font-size: clamp(2rem, 1.8615rem + 0.3846vw, 2.4rem);
+  font-size: autoclamp(2rem, 2.4rem);
 }
 
 h1 {
   font-size: 8rem;
-  font-size: clamp(6.4rem, 5.8462rem + 1.5385vw, 8rem);
+  font-size: autoclamp(6.4rem, 8rem);
 }
 
 h2 {
   font-size: 6.4rem;
-  font-size: clamp(4.8rem, 4.2462rem + 1.5385vw, 6.4rem);
+  font-size: autoclamp(4.8rem, 6.4rem);
 }
 
 h3 {
   font-size: 4rem;
-  font-size: clamp(2.8rem, 2.3846rem + 1.1538vw, 4rem);
+  font-size: autoclamp(2.8rem, 4rem);
 }
 
 h4 {
   font-size: 3.2rem;
-  font-size: clamp(2.4rem, 2.1231rem + 0.7692vw, 3.2rem);
+  font-size: autoclamp(2.4rem, 3.2rem);
 }
 
 .icon {

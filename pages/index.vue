@@ -168,6 +168,10 @@ export default Vue.extend({
   grid-template-rows: auto;
   grid-template-areas: '. . quote quote quote quote . .';
   margin-bottom: 4em;
+
+  @include breakpoint($tablet) {
+    grid-template-areas: '. quote quote quote quote quote quote .';
+  }
 }
 
 .quote {
