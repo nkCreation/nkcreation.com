@@ -41,7 +41,9 @@ export default Vue.extend({
     }
 
     const image = (blockData: any) =>
-      `<figure class="${blockData.data.stretched ? 'block' : 'inline'}">
+      `<figure class="${
+        blockData.data.withBackground ? 'background' : 'transparent'
+      }">
         <img
             loading="lazy"
             src="${env.apiUrl}assets/${blockData.data.file.fileId}.${
@@ -77,19 +79,25 @@ export default Vue.extend({
 .content {
   ::v-deep {
     figure {
+      --figure-shadow-color: rgba(var(--nk-color1-rgb), 0.16);
+      --figure-shadow-property: 0 4px 32px;
+
       margin: 2em 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
 
-      &.block {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-      }
-
-      &.inline {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 2em;
+      &:not(.transparent) {
+        img {
+          background-color: white;
+          padding: 2em;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: var(--figure-shadow-property) var(--figure-shadow-color);
+        }
       }
 
       img {
