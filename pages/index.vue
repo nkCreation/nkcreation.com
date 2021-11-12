@@ -26,7 +26,13 @@
       <div class="section">
         <h2 class="has-subtitle">{{ projects.title }}</h2>
         <p class="subtitle">{{ projects.subtitle }}</p>
-        <div v-for="project in projects.items" :key="project.id" class="bloc">
+        <div
+          v-for="project in projects.items"
+          :key="project.id"
+          class="bloc project"
+        >
+          <NuxtLink :to="'/projects/' + project.slug"></NuxtLink>
+
           <h3>{{ project.title }}</h3>
           <img :src="project.thumbnail" alt="" />
           <p>{{ project.description }}</p>
@@ -66,6 +72,7 @@ export default Vue.extend({
         realisations(limit: 2, filter: { featured: { _eq: true } }) {
           id
           title
+          slug
           description
           thumbnail {
             id
@@ -146,6 +153,18 @@ export default Vue.extend({
 
     &:nth-of-type(2) {
       grid-area: bloc2;
+    }
+  }
+
+  .project {
+    position: relative;
+
+    > a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
