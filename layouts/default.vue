@@ -20,7 +20,10 @@
     flex: 0 0 auto;
   }
   &__page {
+    --wrapper-cols: 6;
+
     flex: 1 1 auto;
+    z-index: 1;
   }
 }
 </style>

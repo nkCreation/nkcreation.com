@@ -38,6 +38,10 @@ html {
   --nk-color2-rgb: #{torgb($color2)};
 }
 
+.content a {
+  color: rgba(var(--nk-color2-rgb), 1);
+}
+
 body {
   min-height: 100%;
   height: 100%;
@@ -52,7 +56,7 @@ body {
 
 .u-wrapper {
   margin: 0 auto;
-  max-width: calc(var(--background-gutter-size) * 8);
+  max-width: calc(var(--background-gutter-size) * var(--wrapper-cols, 8));
   text-align: left;
   width: calc(100% - 3.2rem);
 }
