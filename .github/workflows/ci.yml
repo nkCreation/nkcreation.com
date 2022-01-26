@@ -50,6 +50,7 @@ jobs:
       - name: Run a test build 🛠
         env:
           API_URL: ${{ secrets.API_URL }}
+          HOSTNAME: ${{ secrets.HOSTNAME }}
         run: npm run generate
 
       - name: Semantic release ⬆️
