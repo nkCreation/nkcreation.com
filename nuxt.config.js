@@ -90,11 +90,10 @@ export default {
   },
 
   sitemap: {
-    hostname: (process.env.DEPLOY_PRIME_URL || process.env.URL) || process.env.HOSTNAME,
+    hostname:
+      process.env.DEPLOY_PRIME_URL || process.env.URL || process.env.HOSTNAME,
     gzip: true,
-    exclude: [
-      '/404'
-    ]
+    exclude: ['/404'],
   },
 
   graphql: {
