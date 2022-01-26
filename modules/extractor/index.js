@@ -37,8 +37,8 @@ module.exports = function Extract(moduleOptions) {
     const urls = []
     const test = new RegExp(
       '(http(s?):)([/|.|\\w|\\s|-]|%|:|~)*.(?:' +
-      options.extensions.join('|') +
-      '){1}[^"]*',
+        options.extensions.join('|') +
+        '){1}[^"]*',
       'g'
     )
     const matches = page.html.matchAll(test)
@@ -87,8 +87,8 @@ module.exports = function Extract(moduleOptions) {
     // Parse payload.js to get encoded URIs
     const test = new RegExp(
       '(http(s?):)([\\\\u002F|.|\\w|\\s|-]|%|:|~|\\\\u002F)*.(?:' +
-      options.extensions.join('|') +
-      '){1}[^"]*',
+        options.extensions.join('|') +
+        '){1}[^"]*',
       'g'
     )
 
