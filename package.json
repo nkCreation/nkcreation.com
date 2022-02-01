@@ -62,7 +62,7 @@
     "jest": "^26.5.0",
     "nuxt-graphql-request": "^4.3.0",
     "prettier": "^2.5.1",
-    "sass": "^1.49.0",
+    "sass": "^1.49.4",
     "sass-loader": "^10.2.1",
     "semantic-release": "^18.0.1",
     "stylelint": "^13.10.0",
