@@ -12,14 +12,18 @@
         </div>
 
         <div class="button">
-          <Button>More services</Button>
+          <Button href="/services/">More services</Button>
         </div>
       </div>
 
       <div class="section-quote">
-        <Quote class="quote" author="Christopher Arzur, CTO at Skypaper">
-          This is a fuckin’ great quote about me from an inspiring guy. Like I’m
-          doing very great stuff.
+        <Quote
+          v-for="quote in quotes.items"
+          :key="quote.id"
+          class="quote"
+          :author="quote.author"
+        >
+          {{ quote.quote }}
         </Quote>
       </div>
 
@@ -39,19 +43,30 @@
         </div>
 
         <div class="button">
-          <Button>See my projects</Button>
+          <Button href="/projects/">See my projects</Button>
         </div>
       </div>
     </Page>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import { gql } from 'graphql-tag'
 
-export default Vue.extend({
+export default {
   layout: 'home',
+  head() {
+    return {
+      title: `${this.heroData.SEO?.title || ''} - nkCreation`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.heroData.SEO?.description || '',
+        },
+      ],
+    }
+  },
   async asyncData({ $graphql, env }) {
     const query = gql`
       query homeData {
@@ -60,6 +75,15 @@ export default Vue.extend({
           button_label
           message
           link
+          SEO {
+            title
+            description
+          }
+        }
+        quotes(limit: 4, filter: { status: { _eq: "published" } }) {
+          id
+          author
+          quote
         }
         servicePage: service_page {
           title
@@ -87,12 +111,13 @@ export default Vue.extend({
       }
     `
 
-    const { hero, servicePage, services, projectPage, realisations } =
+    const { hero, servicePage, services, projectPage, realisations, quotes } =
       await $graphql.default.request(query)
 
     return {
       heroData: {
         ...hero,
+        link: hero.link + '/',
         title: hero.title.replace(/\n/g, '<br />'),
         label: hero.button_label,
       },
@@ -100,9 +125,12 @@ export default Vue.extend({
         ...servicePage,
         items: services,
       },
+      quotes: {
+        items: quotes,
+      },
       projects: {
         ...projectPage,
-        items: realisations.map((realisation: any) => {
+        items: realisations.map((realisation) => {
           return {
             ...realisation,
             thumbnail: `${env.apiUrl}assets/${realisation.thumbnail.filename_disk}`,
@@ -111,7 +139,7 @@ export default Vue.extend({
       },
     }
   },
-})
+}
 </script>
 
 <style lang="scss" scoped>
@@ -165,6 +193,12 @@ export default Vue.extend({
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    img {
+      aspect-ratio: 21 / 9;
+      object-fit: contain;
+      padding: 1em;
     }
   }
 

@@ -18,14 +18,16 @@ const defaultPageData = {
 
 export const pageMixin = { ...defaultPageData }
 
-export const pageMixinWithData = (pageSlug = '') => {
+export const pageMixinWithData = (pageSlug = '', customQuery) => {
   return {
     ...defaultPageData,
     async asyncData({ $graphql, params, error }) {
+      let customData = {}
       const query = gql`
         query pagesData($filter: Pages_filter) {
           Pages(filter: $filter) {
             title
+            subtitle
             slug
             content
             date_updated
@@ -36,7 +38,6 @@ export const pageMixinWithData = (pageSlug = '') => {
           }
         }
       `
-
       const { Pages: pages } = await $graphql.default.request(query, {
         filter: {
           status: {
@@ -54,11 +55,16 @@ export const pageMixinWithData = (pageSlug = '') => {
 
       const page = pages[0]
 
+      if (customQuery) {
+        customData = await $graphql.default.request(customQuery)
+      }
+
       return {
         page: {
           ...page,
           content: page.content ? createHTML(page.content) : '',
         },
+        ...customData,
       }
     },
   }

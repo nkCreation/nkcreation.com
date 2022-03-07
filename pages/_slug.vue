@@ -1,5 +1,6 @@
 <template>
-  <div class="u-wrapper">
+  <div>
+    <PageTitle :title="page.title" :subtitle="page.subtitle" />
     <div class="content" v-html="page.content"></div>
   </div>
 </template>

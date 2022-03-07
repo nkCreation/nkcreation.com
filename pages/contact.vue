@@ -1,22 +1,16 @@
 <template>
   <div>
-    <h1 class="has-subtitle">Contact</h1>
-    <p class="subtitle">
-      Interested of being train, want advices or work with me, want more
-      informations about one of my projects or about me?
-    </p>
-    <p>
-      Feel free to contact me, we'll see what we can do together. <br />
-      I usually respond to every one but it might take few days. I'm only human,
-      after all.
-    </p>
+    <PageTitle :title="page.title" :subtitle="page.subtitle" />
+    <div class="content" v-html="page.content"></div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import { pageMixinWithData } from '~/mixins/page.mixin'
 
-export default Vue.extend({})
+export default {
+  mixins: [pageMixinWithData('contact')],
+}
 </script>
 
 <style scoped>

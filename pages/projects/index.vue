@@ -1,11 +1,32 @@
 <template>
   <div>
-    <h1>Projects</h1>
+    <PageTitle :title="page.title" :subtitle="page.subtitle"></PageTitle>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import { gql } from 'graphql-tag'
+import { pageMixinWithData } from '~/mixins/page.mixin'
 
-export default Vue.extend({})
+export default {
+  mixins: [
+    pageMixinWithData(
+      'projects',
+      gql`
+        query {
+          realisations {
+            id
+            title
+            slug
+            description
+            thumbnail {
+              id
+              filename_disk
+            }
+          }
+        }
+      `
+    ),
+  ],
+}
 </script>
