@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const defaultTitle =
   'nkCreation - WebDesigner & Developer in Rennes, FR (35)'
 export const defaultDescription =
@@ -14,7 +16,15 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: defaultTitle,
+    description: defaultDescription,
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' },
+    ],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#005e7e' },
     ],
   },
@@ -40,6 +50,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/svg-sprite',
     [
       '@nuxtjs/google-fonts',
       {
@@ -52,8 +63,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa,
     [
       '~/modules/extractor',
@@ -64,9 +73,6 @@ export default {
     ],
     '@nuxtjs/sitemap',
   ],
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
@@ -91,9 +97,23 @@ export default {
 
   sitemap: {
     hostname:
-      process.env.DEPLOY_PRIME_URL || process.env.URL || process.env.HOSTNAME,
+      process.env.HOSTNAME || process.env.DEPLOY_PRIME_URL || process.env.URL,
     gzip: true,
     exclude: ['/404'],
+    routes() {
+      return fetchRoutes()
+    },
+  },
+
+  svgSprite: {
+    input: '~/assets/svg/',
+    iconsPath: false,
+  },
+
+  generate: {
+    routes() {
+      return fetchRoutes()
+    },
   },
 
   graphql: {
@@ -103,4 +123,27 @@ export default {
       },
     },
   },
+}
+
+function slashifySlug(slug) {
+  return `${slug.startsWith('/') ? '' : '/'}${slug}`
+}
+
+async function fetchRoutes() {
+  const routes = await Promise.all([
+    axios
+      .get(process.env.API_URL + 'items/Pages?filter[status][_eq]=published')
+      .then(({ data }) => data.data.map((route) => slashifySlug(route.slug))),
+    axios
+      .get(
+        process.env.API_URL + 'items/realisations?filter[status][_eq]=published'
+      )
+      .then(({ data }) =>
+        data.data.map((realisation) =>
+          slashifySlug(`/projects/${realisation.slug}`)
+        )
+      ),
+  ])
+
+  return routes.flat()
 }

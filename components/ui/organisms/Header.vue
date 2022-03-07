@@ -1,25 +1,31 @@
 <template>
-  <header :class="{ 'is-dark': dark }">
-    <div class="u-wrapper">
+  <header class="header" :class="{ 'is-dark': dark }">
+    <div class="u-wrapper header__inner">
       <NuxtLink to="/" class="logo">
         <Logo :dark="false" />
         <Logo :dark="true" />
       </NuxtLink>
+
+      <Navigation :dark="dark" />
     </div>
   </header>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import Vue from 'vue'
 
-@Component
-export default class HeaderComponent extends Vue {
-  @Prop({ type: Boolean, default: false }) readonly dark!: boolean
-}
+export default Vue.extend({
+  props: {
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+  },
+})
 </script>
 
 <style scoped lang="scss">
-header {
+.header {
   --header-timing: 0.2s;
   --is-dark: 0;
   --opacity: calc(1 - var(--is-dark));
@@ -27,6 +33,12 @@ header {
   padding: 2.4rem 0;
   position: relative;
   z-index: 2;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &.is-dark {
     --is-dark: 1;

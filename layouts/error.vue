@@ -1,5 +1,6 @@
 <template>
   <div>
+    <svg-symbols></svg-symbols>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
   </div>

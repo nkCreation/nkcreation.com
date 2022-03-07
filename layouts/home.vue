@@ -1,22 +1,31 @@
 <template>
   <div class="home">
+    <svg-symbols></svg-symbols>
     <div class="home__header">
-      <Header ref="headerElement" :dark="headerDark" />
+      <Header key="homeheader" class="homeheader" :dark="headerDark" />
     </div>
 
     <div class="home__page">
       <Nuxt />
     </div>
+
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import HeaderComponent from '~/components/ui/organisms/Header.vue'
+
 export default Vue.extend({
+  name: 'Home',
   data: () => ({
     headerDark: true,
   }),
+  watch: {
+    $route() {
+      this.doSomething(window.scrollY)
+    },
+  },
   mounted() {
     let ticking = false
 
@@ -35,15 +44,18 @@ export default Vue.extend({
       })
     }
 
-    this.doSomething(0)
+    this.doSomething(window.scrollY)
   },
   methods: {
     doSomething(scrollPos: number) {
-      const element = (this.$refs.headerElement as HeaderComponent)
-        ?.$el as HTMLElement
-      const height = element?.clientHeight
+      const headerElement = document.querySelector('.homeheader')
+      const height = headerElement?.clientHeight || 0
 
       this.headerDark = !(scrollPos > window.innerHeight - height)
+      this.headerDark
+        ? headerElement?.classList.add('is-dark')
+        : headerElement?.classList.remove('is-dark')
+
       document.documentElement.style.setProperty(
         '--scroll-position',
         '' + scrollPos

@@ -175,8 +175,12 @@ module.exports = function Extract(moduleOptions) {
     return payload
   }
 }
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
 
 async function saveRemoteImage(url, path) {
+  await sleep(getRandomArbitrary(100, 10000))
   const res = await fetch(url)
   const fileStream = fs.createWriteStream(path)
   return await new Promise((resolve, reject) => {
@@ -205,4 +209,8 @@ function slugify(text) {
 
 function removeTrailingBackslash(str) {
   return str.replace(/\\+$/, '')
+}
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min
 }

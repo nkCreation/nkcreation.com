@@ -1,12 +1,21 @@
 <template>
   <div class="default">
-    <Header class="default__header" />
+    <svg-symbols></svg-symbols>
+    <Header key="defaultheader" class="default__header" />
 
     <Page class="default__page">
       <Nuxt />
     </Page>
+
+    <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Default',
+}
+</script>
 
 <style lang="scss" scoped>
 .default {
