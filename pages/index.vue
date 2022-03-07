@@ -55,18 +55,6 @@ import { gql } from 'graphql-tag'
 
 export default {
   layout: 'home',
-  head() {
-    return {
-      title: `${this.heroData.SEO?.title || ''} - nkCreation`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.heroData.SEO?.description || '',
-        },
-      ],
-    }
-  },
   async asyncData({ $graphql, env }) {
     const query = gql`
       query homeData {
@@ -137,6 +125,18 @@ export default {
           }
         }),
       },
+    }
+  },
+  head() {
+    return {
+      title: `${this.heroData.SEO?.title || ''} - nkCreation`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.heroData.SEO?.description || '',
+        },
+      ],
     }
   },
 }
