@@ -104,6 +104,7 @@ export default Vue.extend({
   &__item {
     margin: 0 2em;
     font-family: var(--font-family-title);
+    letter-spacing: 0;
     font-size: autoclamp(2rem, 2.4rem);
 
     @supports (gap: 2em) {

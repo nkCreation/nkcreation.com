@@ -55,7 +55,7 @@ export default {
       '@nuxtjs/google-fonts',
       {
         families: {
-          Lato: [400, 700, 900],
+          'Source+Sans+Pro': [200, 400, 600],
         },
       },
     ],
