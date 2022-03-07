@@ -61,7 +61,7 @@
     "graphql-tag": "^2.12.6",
     "husky": "^7.0.4",
     "jest": "^26.5.0",
-    "nuxt-graphql-request": "^4.3.0",
+    "nuxt-graphql-request": "^5.0.0",
     "prettier": "^2.5.1",
     "raw-loader": "^4.0.2",
     "sass": "^1.49.0",
