@@ -23,7 +23,7 @@ export default class ButtonComponent extends Vue {
     return {
       type: this.type,
       class: this.classesNames,
-      href: this.isANuxtLink ? null : this.href,
+      href: this.href || null,
       to: this.isANuxtLink ? this.href : null,
       target: this.href && !this.isANuxtLink ? '_blank' : null,
     }
@@ -58,7 +58,7 @@ export default class ButtonComponent extends Vue {
   height: 2.4em;
   border-radius: 2em;
   color: var(--nk-button-color);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: calc(-16em / 1000);
   font-size: 2rem;
   display: inline-flex;
