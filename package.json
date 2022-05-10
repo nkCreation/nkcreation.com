@@ -28,7 +28,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "axios": "^0.25.0",
-    "core-js": "^3.20.3",
+    "core-js": "^3.22.5",
     "editorjs-html": "^3.4.2",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.8",
