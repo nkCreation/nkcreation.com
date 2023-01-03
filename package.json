@@ -59,7 +59,7 @@
     "fibers": "^5.0.1",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
-    "husky": "^7.0.4",
+    "husky": "^8.0.3",
     "jest": "^26.5.0",
     "nuxt-graphql-request": "^4.3.0",
     "prettier": "^2.5.1",
