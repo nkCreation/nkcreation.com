@@ -66,7 +66,7 @@
     "raw-loader": "^4.0.2",
     "sass": "^1.54.0",
     "sass-loader": "^10.2.1",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^20.0.3",
     "stylelint": "^13.10.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
